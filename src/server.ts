@@ -21,6 +21,8 @@ if(process.env.NODE_ENV){
     })
 }
 
+import "./helper/database/mongo/index.mongodb"
+
 const app = express()
 
 app.use("/", indexRouter)
