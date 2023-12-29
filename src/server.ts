@@ -1,7 +1,5 @@
-import express from "express"
 import {config} from "dotenv"
 import path from "path"
-import indexRouter from "./route/index.route"
 
 config({
     path : path.join(
@@ -20,6 +18,9 @@ if(process.env.NODE_ENV){
         debug : process.env.NODE_ENV !== "development"
     })
 }
+
+import express from "express"
+import indexRouter from "./route/index.route"
 
 const app = express()
 
