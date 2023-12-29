@@ -49,7 +49,7 @@ const logger = winston.createLogger({
         customFormat
     ),
     defaultMeta : {
-        service : "malifax-ticket-microservice"
+        service : "a-service"
     },
     transports
 })
