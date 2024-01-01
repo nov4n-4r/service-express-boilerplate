@@ -21,6 +21,8 @@ if(process.env.NODE_ENV){
 
 import express from "express"
 import indexRouter from "./route/index.route"
+import logger from "./helper/logger.helper"
+import "./helper/database/mongo/index.mongodb"
 
 const app = express()
 
@@ -29,6 +31,6 @@ app.use("/", indexRouter)
 app.listen(
     process.env.PORT,
     () => {
-        console.log(`App is running on port : ${process.env.PORT}`)
+        logger.verbose(`App is running on port : ${process.env.PORT}`)
     }
 )
